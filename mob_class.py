@@ -2,9 +2,9 @@ import random
 
 
 class Mob:
-    """Base class"""
+    """Base class, contains all main functions."""
 
-    def __init__(self, name, vitality, strength, agility):
+    def __init__(self, name, vitality, strength, agility, defense):
         self.name = name
         # Name
         self.vitality = vitality
@@ -15,13 +15,16 @@ class Mob:
         # TODO it'll give a difference between strength and dexterity characters
         self.agility = agility
         # Speed
-
+        self.defense = defense
         self.total_vitality = self.vitality
         # Max health, created when character is created.
 
     is_alive = True
     # Determines if they can act or be acted on
 
+   
+    # Flat physical reducer to damage
+    
     def check_life(self):
         # Check if alive
 
@@ -36,7 +39,8 @@ class Mob:
 
     def attack(self, target):
         # Calculate damage given, reduce target vit, check if alive.
-
+        # TODO add armor, hit system. 
+        # TODO add randomizer, compounded by armor rating
         if target.is_alive and self.is_alive:
             # Check if target and attacker are both alive, else attack is cancelled.
 
@@ -58,7 +62,7 @@ class Mob:
 
             else:
                 print(self.name, "attacked", target.name + "!")
-                damage_given = self.strength * 2
+                damage_given = (self.strength * 2) - target.defense
                 print(self.name, "dealt " + str(damage_given), "damage!")
                 # Calculate damage dealt
 
