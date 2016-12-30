@@ -1,0 +1,15 @@
+Base class
+
+(Fighter)
+Commands
+
+-Attack
+-Guard
+-Item
+-Run
+-Row
+
+-Advance (x1.5 damage, 0.6 defense for the remainder of the turn)
+
+-Swords, fists
+-Low speed and magic

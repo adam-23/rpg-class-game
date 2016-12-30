@@ -1,0 +1,57 @@
+Warrior
+-fighter (initial) fists, knives, swords
+-fistfighter (fists)	monk (fists, some evasion, some white magic)
+		Strongman (brute weapons, fists, shields)
+			pugilist	(fists only, powerhouse)
+
+Dark knight (spears, swords, katana, shade magic, blood magic)
+-soldier (swords, shields)	paladin (spears, swords, shields, white magic)
+			Lord (shields, all weapons)
+	
+-hoplite (spears, shields)	Skypiercer (long melee range, shock, multiple targets)	
+dragon knight (wind, fire, jump, no shields)
+				Defender (greatshield king, most warrior weapons)
+			
+
+
+Raptor
+-thief (initial)
+-Scout	(knives)	Guerilla (provoke, light fighter, high evasion, many weapons)
+			Ninja (katana, knives, special techs)
+			Survivalist (healing, items, potions, knives, can see weaknesses)
+
+-Archer (bows)	Sniper (critical hits king) (buff to damage, no defense modifier applies)
+			Hunter (multiple arrows for targets, special aux techs)
+			Spellbow (limited magic, elemental exploiter, long range)
+
+-Rogue   (knives)	Bladedancer (can equip swords and offhand knives)
+			Knifethrower (midrange fighter, high damage)
+			Freelancer (can use every non machinist weapon)
+
+Mage
+-caster (initial)		
+Magician 	Cleric (pure healing)
+			Sage (no specialty, just useful)
+			Warpriest (brute weapons, white magic)
+
+	Bard		Enchanter (group buffs)
+			Spellsinger (Edward Type on steroids)
+			Summoner (Rydia type)
+
+	Darkcaster	Necromancer (Death summoner)
+			Obscrimagus (Dark mage)
+			Eldritch Voice	(Great Ones user) 
+Mechanic
+-Handyman (initial)	Inventor	Machinist	(Crossbowman and single target firebombs)
+					Techknight	(bolt swordsman, shields)
+					Electrician	(bolt all purpose, electric maces)
+
+			Mixer		Chemist (damage)
+					Apothecarian (healing)
+					Ritualist (use items to use magic attacks, change landscape)
+
+			Pyrotech	Grenadier (Many target blasts) (fire/normal area damage)
+					Cannoneer (slow setup, wrecks things) (civ equiv)
+					Dragoon (single target flamethrower and shields, lances)
+
+			

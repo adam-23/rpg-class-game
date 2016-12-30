@@ -1,0 +1,27 @@
+(DAMAGE TYPES)
+Shock
+Fire
+Ice
+Wind
+Dark
+Light
+Dragon
+Water
+Earth
+
+Normal
+
+
+(DAMAGE WEAKNESSES)
+
+Earth- (Water, Ice)
+Shock- (Earth, Fire)
+Fire- (Earth, Water, Ice)
+Wind- (Shock, Ice, Wind)
+Ice (Fire, Dragon)
+Dark (Light)
+Light (Dark)
+Dragon (Dragon, Shock)
+Water (Shock, Ice)
+Normal (None)
+
