@@ -11,20 +11,16 @@ class Mob:
         # Hit points
         self.strength = strength
         # Physical damage
-        # TODO add flat physical reduction for beating armored opponents
-        # TODO it'll give a difference between strength and dexterity characters
         self.agility = agility
         # Speed
         self.defense = defense
+        # Flat physical reducer to damage
         self.total_vitality = self.vitality
         # Max health, created when character is created.
 
     is_alive = True
     # Determines if they can act or be acted on
 
-   
-    # Flat physical reducer to damage
-    
     def check_life(self):
         # Check if alive
 
@@ -37,10 +33,8 @@ class Mob:
             print(self.name + " lives.")
             # If health is above zero, they live"""
 
-    def attack(self, target):
+    def single_hit(self, target):
         # Calculate damage given, reduce target vit, check if alive.
-        # TODO add armor, hit system. 
-        # TODO add randomizer, compounded by armor rating
         if target.is_alive and self.is_alive:
             # Check if target and attacker are both alive, else attack is cancelled.
 
@@ -49,8 +43,10 @@ class Mob:
             if target_evasion > 100:
                 target_evasion = 100
             # Quotient of agility times 4, + 5, no bigger than 100
+            # print("target evasion = " + (str(target_evasion)))
 
             evasion_chance = random.randint(0, 101)
+            # print("evasion_chance =", str(evasion_chance))
             # Pick a random number.
 
             # print(str(target_evasion), "%") # Prints evasion chance
@@ -63,8 +59,22 @@ class Mob:
             else:
                 print(self.name, "attacked", target.name + "!")
                 damage_given = (self.strength * 2) - target.defense
+                # Damage is 2 * strength minus target defense
+
+                random_damage_multiplier = float(random.randint(80, 120)/100)
+                # print("random damage multiplier =", random_damage_multiplier)
+                damage_given = (float(random_damage_multiplier * damage_given))
+                # print("un-rounded float damage = ", damage_given)
+                # Multiply by random number between .8 and 1.2
+
+                damage_given = int(round(damage_given))
+                # Round the damage after randomizing
+                if damage_given == 0:
+                    damage_given = 1
+                    # Minimum attack damage is always 1
+
                 print(self.name, "dealt " + str(damage_given), "damage!")
-                # Calculate damage dealt
+                # Print damage
 
                 target.vitality -= damage_given
                 # Reduce target vitality
@@ -82,5 +92,18 @@ class Mob:
         else:
             return
 
-        # TODO implement hit system to allow str/dex characters to differentiate
-        # TODO Implement number of attack hits based on agility
+
+    def attack(self, target):
+        hits_number = float(self.agility / 8)
+        # Hits are agility / 8
+
+        hits_number = int(round(hits_number))
+        # Round hits to a float
+
+        if hits_number < 1:
+            hits_number = 1
+            # Always attack at least once
+
+        for i in range(0, hits_number):
+            self.single_hit(target)
+            # Call the single hit function repeatedly

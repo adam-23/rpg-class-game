@@ -1,18 +1,10 @@
 from character_classes import *
 from monster_classes import *
 
-npc = FistFighter("NPC Bob")
-adam = Hoplite("Adam")
+fist1 = FistFighter("Fistfighter")
+spear1 = Hoplite("Hoplite")
 rat1 = Rat()
 
-rat1.attack(adam)
-adam.attack(rat1)
-adam.attack(npc)
 
-rat1.attack(adam)
-adam.attack(rat1)
-adam.attack(npc)
-
-rat1.attack(adam)
-adam.attack(rat1)
-adam.attack(npc)
+spear1.attack(fist1)
+fist1.attack(spear1)
