@@ -20,10 +20,11 @@ class Mob:
         self.spirit = spirit
         # Spirit based magic defense and attack
         self.magic_points = magic_points
-
+        # Magic points
         self.total_vitality = self.vitality
         # Max health, created when character is created.
         self.total_magic_points = self.magic_points
+        # Max magic points
 
     is_alive = True
     # Determines if they can act or be acted on
