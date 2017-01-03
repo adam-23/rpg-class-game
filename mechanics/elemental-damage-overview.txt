@@ -1,13 +1,13 @@
 (DAMAGE TYPES)
-Shock
-Fire
-Ice
-Wind
-Dark
-Light
-Dragon
-Water
-Earth
+Shock (spi)
+Fire (int + spi /2)
+Ice (int)
+Wind (spi)
+Dark (int)
+Light (spi)
+Dragon (int + spi /2)
+Water (int)
+Earth (int + spi /2)
 
 Normal
 

@@ -34,11 +34,11 @@ Magician 	Cleric (pure healing)
 			Sage (no specialty, just useful)
 			Warpriest (brute weapons, white magic)
 
-	Bard		Enchanter (group buffs)
+Bard		Enchanter (group buffs)
 			Spellsinger (Edward Type on steroids)
 			Summoner (Rydia type)
 
-	Darkcaster	Necromancer (Death summoner)
+Darkcaster	Necromancer (Death summoner)
 			Obscrimagus (Dark mage)
 			Eldritch Voice	(Great Ones user) 
 Mechanic

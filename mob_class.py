@@ -4,7 +4,7 @@ import random
 class Mob:
     """Base class, contains all main functions."""
 
-    def __init__(self, name, vitality, strength, agility, defense):
+    def __init__(self, name, vitality, strength, agility, defense, intelligence, spirit, magic_points):
         self.name = name
         # Name
         self.vitality = vitality
@@ -15,8 +15,15 @@ class Mob:
         # Speed
         self.defense = defense
         # Flat physical reducer to damage
+        self.intelligence = intelligence
+        # Intelligence based magic defense and attack
+        self.spirit = spirit
+        # Spirit based magic defense and attack
+        self.magic_points = magic_points
+
         self.total_vitality = self.vitality
         # Max health, created when character is created.
+        self.total_magic_points = self.magic_points
 
     is_alive = True
     # Determines if they can act or be acted on
@@ -53,9 +60,9 @@ class Mob:
 
             target_evasion = float(target.agility / self.agility) * 4
             target_evasion += 5
-            if target_evasion > 100:
-                target_evasion = 100
-            # Quotient of agility times 4, + 5, no bigger than 100
+            if target_evasion > 50:
+                target_evasion = 50
+            # Quotient of agility times 4, + 5, no bigger than 50
 
             evasion_chance = random.randint(0, 101)
             # Pick a random number.
@@ -105,7 +112,7 @@ class Mob:
             print(self.name, "attacked", target.name + "!")
             print(self.name + " dealt " + str(hits_number) + " hits!")
             print(self.name, "dealt " + str(total_damage_given), "damage!")
-            print(target.name, str(target.vitality) + "/" + str(target.total_vitality))
+            print(target.name, "HP :", str(target.vitality) + "/" + str(target.total_vitality))
             # Print target, hits, damage, target health
 
             target.check_life()
@@ -113,3 +120,12 @@ class Mob:
             print()
         else:
             return
+
+    backRow = False
+    # Can't be attacked with melee commands until front rows are killed
+
+    rangedAttacker = False
+    # Melee or ranged damage
+
+    # TODO MP regen after every battle, action
+    # TODO Row system
