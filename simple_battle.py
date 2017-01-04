@@ -21,13 +21,14 @@ fist1.attack(spear1)
 soldier1.attack(arch1)
 arch1.attack(soldier1)
 
-rogue1.attack(scout1)
-scout1.attack(rogue1)
 """
 
-# darkmage1.pulse(soldier1)
-# soldier1.attack(darkmage1)
+rogue1.attack(scout1)
+scout1.attack(rogue1)
 
-bard1.pulse(scout1)
-mage1.pulse(scout2)
-darkmage1.pulse(scout3)
+darkmage1.pulse(soldier1)
+soldier1.attack(darkmage1)
+
+# bard1.pulse(scout1)
+# mage1.pulse(scout2)
+# darkmage1.pulse(scout3)
