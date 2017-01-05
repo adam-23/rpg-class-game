@@ -1,4 +1,4 @@
-from mob_class import *
+from main_mob_class import *
 
 
 class Monster(Mob):

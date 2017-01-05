@@ -25,7 +25,7 @@ Raptor
 			Spellbow (limited magic, elemental exploiter, long range)
 
 -Rogue   (knives)	Bladedancer (can equip swords and offhand knives)
-			Knifethrower (midrange fighter, high damage)
+			Knifethrower (mid-range fighter, high damage)
 			Freelancer (can use every non machinist weapon)
 
 Mage
@@ -36,7 +36,7 @@ Magician 	Cleric (pure healing)
 
 Bard		Enchanter (group buffs)
 			Spellsinger (Edward Type on steroids)
-			Summoner (Rydia type)
+			Summoner (ff4 type)
 
 Darkcaster	Necromancer (Death summoner)
 			Obscrimagus (Dark mage)

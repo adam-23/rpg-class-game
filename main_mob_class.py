@@ -45,6 +45,7 @@ class Mob:
 
     is_alive = True
     is_melee_target = True
+
     # Determines if they can act or be acted on
 
     def check_life(self):
@@ -149,6 +150,37 @@ class Mob:
             print("One is dead, attack cancelled.")
             # If target or attacker is dead, stop.
             return
+
+    # TODO: battle commands for every character
+    def battle_command_list(self):
+        activeBattle = True
+        print("Attack = A")
+        print("Defend = D")
+        print("Item = I")
+        print("Run = R")
+        print("Tap = T")
+        print("S for special command")
+        # TODO insert special command into every class that deserves one
+        while activeBattle:
+            try:
+                user_choice = input("Pick a command:  ").lower()
+            except TypeError:
+                continue
+            if user_choice == 'a':
+                # TODO write a target-picking system
+                self.attack(target)
+            elif user_choice == 'd':
+                # TODO self.defend()
+                None
+            elif user_choice == 'i':
+                # TODO use_item
+                None
+            elif user_choice == 'r':
+                # TODO run_away()
+                None
+            elif user_choice == 'r':
+                # TODO Run Special user commands:
+                None
 
     battle_party = []
 
