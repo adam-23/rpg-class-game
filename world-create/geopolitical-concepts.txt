@@ -1,15 +1,59 @@
 Where are you beginning your journey?
 
 -Suplena (HighPlain) Romance
+    -Hunters
+    -Archers
 -Valvic (Valley) Romance
+    -Mechanics
+    -Bards
 -Arbocava(Tree Caves) Romance
+    -Spellbows
+    -Arcanists
+    -White Mages
 -Salastika (Saline Town) Elleniki
 -Protolimos (Crossing City) (Capital Harbor) Elleniki
--Kalstad (Coldstead) Germanic
+    -Palatinus
+    -Skypiercer
+-Kalstad (ColdStead) Germanic
+    -Defender
+    -Strongmen
 -Dansed (RiverSettlement) Germanic
--Wasi (Oasis) Iranian 
--Imradas (GiantGod'sHand) Iranian
+-Wasi (Oasis) Iranian
+    -Dark Mages
+    -Dark Knight
+-Jamdas (GiantGod'sHand) Iranian
+    -Ninjas
+
 -Wodgorod (Watertown) Slav
+    -Dragon Knight
+    -
+-Amphipeli (Attendant) Elleniki colony
+
+
+
+
+
+
+
+
+Protolimos is conquered by a solar demigod
+Iliosen quickly flattens all resistance in Salastika.
+Some citizens quickly flee to Wodgorod
+
+Iliosen sends ships north to subjugate Dansed, which the Lord succumbs to.
+A resistance is born in Dansed.
+Kalstad refuses to send aid to Dansed, they're isolationist.
+
+Wasi and Jamdas unite and destroy Iliosen's invading army.
+However, both cities are under population lock-down.
+Wasi is attempting to create a magical super-weapon.
+
+Suplena raises massive armies, but are in a state of constant war.
+Many of Arbocava's trees are destroyed, and they need to rebuild.
+Arbocava is in a massive state of unrest from daimons.
+Valvic has more or less peacefully assimilated from an Elleniki aristocracy.
+They provide many weapons and rare materials.
+Valvic's materials are shipped through Amphipeli.
 
 
 

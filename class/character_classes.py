@@ -79,8 +79,10 @@ class Caster(Player):
             magic_points = self.reduce_magic_points(1)
             # Reduce by 1
 
-            self.check_miss(target)
-            # Check if miss
+            miss = self.check_miss(target)
+            if miss:
+                return
+                # Check if hit or miss
 
             total_damage_given = 0
 

@@ -1,4 +1,5 @@
 from character_classes import *
+
 from monster_classes import *
 
 fist1 = FistFighter("Fistfighter")

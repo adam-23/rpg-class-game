@@ -45,6 +45,7 @@ class Mob:
 
     is_alive = True
     is_melee_target = True
+    special_command_name = 'Filler Special'
 
     # Determines if they can act or be acted on
 
@@ -151,36 +152,46 @@ class Mob:
             # If target or attacker is dead, stop.
             return
 
-    # TODO: battle commands for every character
-    def battle_command_list(self):
-        activeBattle = True
+    def special_command(self, command_name):
+        print(command_name)
+        # TODO: battle commands for every character
+
+    def battle_command_list(self, command_name):
+        active_battle = True
         print("Attack = A")
         print("Defend = D")
         print("Item = I")
         print("Run = R")
         print("Tap = T")
-        print("S for special command")
+        print("S for " + command_name)
         # TODO insert special command into every class that deserves one
-        while activeBattle:
+
+        while active_battle:
             try:
                 user_choice = input("Pick a command:  ").lower()
             except TypeError:
                 continue
             if user_choice == 'a':
+                print()
+
                 # TODO write a target-picking system
-                self.attack(target)
             elif user_choice == 'd':
                 # TODO self.defend()
-                None
+                print(self.name + " began defending!")
             elif user_choice == 'i':
                 # TODO use_item
-                None
+                print()
             elif user_choice == 'r':
                 # TODO run_away()
-                None
-            elif user_choice == 'r':
+                print()
+
+            elif user_choice == 't':
+                # TODO tap()
+                print()
+
+            elif user_choice == 's':
                 # TODO Run Special user commands:
-                None
+                self.special_command()
 
     battle_party = []
 
