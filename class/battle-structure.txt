@@ -1,0 +1,22 @@
+
+
+
+list of enemies
+list of heroes
+
+	while any enemies or any heroes:
+		every unit takes turn
+			turn
+				attack
+					attack, reduce
+				defend
+					add set value of defense until own turn comes around again
+				item
+					use item from inventory list, which comes from party
+				run
+					chance to end engagement
+				tap
+					reduce health by 1
+				special
+					idk yet 
+

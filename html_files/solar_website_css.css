@@ -1,0 +1,27 @@
+body {
+    background-color: black;
+    color: orange;
+}
+
+h1 {
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
+
+.solar_header {
+    text-align: center;
+}
+
+.class_descriptor_box {
+    float: right;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.weapon_box_type {
+    float: left;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+}
