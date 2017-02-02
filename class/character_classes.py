@@ -16,6 +16,17 @@ class Hoplite(Fighter):
         super().__init__(name, vitality=55, strength=12, agility=5, defense=8,
                          intelligence=4, spirit=4, magic_points=2)
 
+    def special_command(self, target):
+        specialty_name = "[Pierce]"
+
+        orig_strength = self.strength
+        self.strength *= 0.75
+        print(specialty_name + " 1/2")
+        self.attack(target)
+        print(specialty_name + " 2/2")
+        self.attack(target)
+        self.strength = orig_strength
+
 
 class Soldier(Fighter):
     """Base sword-wielding class"""

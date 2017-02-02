@@ -45,6 +45,7 @@ class Mob:
 
     is_alive = True
     is_melee_target = True
+    is_defending = False
 
     # Determines if they can act or be acted on
 
@@ -151,9 +152,16 @@ class Mob:
             # If target or attacker is dead, stop.
             return
 
+    def special_command(self, target):
+        specialty_name = "[Rush]"
+        print(specialty_name)
+        self.strength *= 1.5
+        self.attack(target)
+        self.strength *= (2 / 3)
+
     # TODO: battle commands for every character
     def battle_command_list(self):
-        activeBattle = True
+        active_battle = True
         print("Attack = A")
         print("Defend = D")
         print("Item = I")
@@ -161,7 +169,10 @@ class Mob:
         print("Tap = T")
         print("S for special command")
         # TODO insert special command into every class that deserves one
-        while activeBattle:
+        while active_battle:
+            self.is_defending = False
+            # If they try to act, they can no longer be actively defending.
+
             try:
                 user_choice = input("Pick a command:  ").lower()
             except TypeError:
@@ -171,18 +182,18 @@ class Mob:
                 self.attack(target)
             elif user_choice == 'd':
                 # TODO self.defend()
-                None
+                self.is_defending = True
+                print()
             elif user_choice == 'i':
                 # TODO use_item
-                None
+                print()
             elif user_choice == 'r':
                 # TODO run_away()
-                None
-            elif user_choice == 'r':
+                print()
+            elif user_choice == 's':
+                print()
                 # TODO Run Special user commands:
-                None
-
-    battle_party = []
+                # special_command(self.specialty_name, target)
 
     backRow = False
     # Can't be attacked with melee commands until front rows are killed

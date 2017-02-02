@@ -1,0 +1,38 @@
+body {
+    background-color: black;
+    color: orange;
+}
+
+h1 {
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
+
+.solar_header {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 34%;
+}
+
+.solar_header p {
+    text-align: left;
+}
+
+.class_descriptor_box {
+    float: right;
+    width: 33%;
+}
+
+.weapon_box_type {
+    float: left;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 30px;
+    width: 33%;
+}
+
+.weapon_box_type h3 {
+    color: red;
+}

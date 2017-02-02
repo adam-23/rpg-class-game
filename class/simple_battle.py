@@ -30,6 +30,9 @@ scout1.attack(rogue1)
 darkmage1.pulse(soldier1)
 soldier1.attack(darkmage1)
 
+spear1.special_command(scout3)
+spear1.attack(scout2)
+
 # bard1.pulse(scout1)
 # mage1.pulse(scout2)
 # darkmage1.pulse(scout3)
