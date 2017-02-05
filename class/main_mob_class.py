@@ -47,6 +47,13 @@ class Mob:
     is_melee_target = True
     is_defending = False
 
+    backRow = False
+    # Can't be attacked with melee commands until front rows are killed
+
+    rangedAttacker = False
+
+    # Melee or ranged damage
+
     # Determines if they can act or be acted on
 
     def check_life(self):
@@ -164,11 +171,10 @@ class Mob:
         active_battle = True
         print("Attack = A")
         print("Defend = D")
-        print("Item = I")
-        print("Run = R")
-        print("Tap = T")
+        # print("Item = I")
+        # print("Run = R")
+        # print("Tap = T")
         print("S for special command")
-        # TODO insert special command into every class that deserves one
         while active_battle:
             self.is_defending = False
             # If they try to act, they can no longer be actively defending.
@@ -181,25 +187,18 @@ class Mob:
                 # TODO write a target-picking system
                 self.attack(target)
             elif user_choice == 'd':
-                # TODO self.defend()
                 self.is_defending = True
-                print()
-            elif user_choice == 'i':
-                # TODO use_item
-                print()
-            elif user_choice == 'r':
-                # TODO run_away()
                 print()
             elif user_choice == 's':
                 print()
                 # TODO Run Special user commands:
                 # special_command(self.specialty_name, target)
-
-    backRow = False
-    # Can't be attacked with melee commands until front rows are killed
-
-    rangedAttacker = False
-    # Melee or ranged damage
+            """elif user_choice == 'i':
+                # TODO use_item
+                print()
+            elif user_choice == 'r':
+                # TODO run_away()
+                print()"""
 
     # TODO MP regeneration after every battle, action
     # TODO Row system
