@@ -20,13 +20,16 @@ class Hoplite(Fighter):
         specialty_name = "[Pierce]"
 
         orig_strength = self.strength
-        self.strength *= 0.75
-        print(specialty_name + " 1/2")
-        self.attack(target)
-        print(specialty_name + " 2/2")
-        self.attack(target)
-        self.strength = orig_strength
+        target_orig_defense = target.defense
 
+        self.strength *= 1.2
+        target.defense = 0.8
+
+        print(specialty_name)
+        self.attack(target)
+
+        self.strength = orig_strength
+        target.defense = target_orig_defense
 
 class Soldier(Fighter):
     """Base sword-wielding class"""

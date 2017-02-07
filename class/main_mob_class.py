@@ -44,17 +44,16 @@ class Mob:
         # Max magic points
 
     is_alive = True
-    is_melee_target = True
-    is_defending = False
+    # Determines if they can act or be acted on
 
+    is_melee_target = True
+    rangedAttacker = False
     backRow = False
     # Can't be attacked with melee commands until front rows are killed
-
-    rangedAttacker = False
-
+    # TODO remove one of these.
     # Melee or ranged damage
 
-    # Determines if they can act or be acted on
+    is_defending = False
 
     def check_life(self):
         # Check if alive
