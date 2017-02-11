@@ -1,0 +1,5 @@
+Class idea to make a mage based around the idea of Zygarde's cells.
+    hexagonal
+    lights
+    power gem
+    
