@@ -109,6 +109,11 @@ class Mob:
         return target.vitality
         # Print target, hits, damage, target health
 
+    def defend(self):
+        self.is_defending = True
+        print()
+        return self.is_defending
+
     def attack(self, target):
 
         """
@@ -136,7 +141,6 @@ class Mob:
 
             for i in range(0, hits_number):
                 # For every hit,
-
                 damage_given = self.single_hit(target)
                 damage_given = randomize_damage(damage_given)
                 total_damage_given += damage_given
@@ -145,6 +149,11 @@ class Mob:
             print(self.name, "attacked", target.name + "!")
             print(self.name + " dealt " + str(hits_number) + " hits!")
             # Print summary
+
+            if target.is_defending:
+                print(target.name, "is defending!")
+                total_damage_given = int(round(total_damage_given * 0.6))
+                # If target is defending, reduce total damage by 40% and then round up.
 
             self.reduce_vitality(target, total_damage_given)
             # Reduce target vitality, print damage, print target vitality.
@@ -166,7 +175,7 @@ class Mob:
         self.strength *= (2 / 3)
 
     # TODO: battle commands for every character
-    def battle_command_list(self):
+    def battle_command_list(self, target):
         active_battle = True
         print("Attack = A")
         print("Defend = D")
@@ -186,8 +195,7 @@ class Mob:
                 # TODO write a target-picking system
                 self.attack(target)
             elif user_choice == 'd':
-                self.is_defending = True
-                print()
+                self.defend()
             elif user_choice == 's':
                 print()
                 # TODO Run Special user commands:

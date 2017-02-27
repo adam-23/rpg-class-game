@@ -4,21 +4,10 @@ from main_mob_class import *
 class Player(Mob):
     """Base human class"""
 
-    def turn_choice(self, target):
-        print("A = Attack")
-        print("S = Spell")
-        print("D = Defend")
-        print("F = Flee")
-        print()
-        move_input = input("move: ").lower()
-        print(move_input)
-        if move_input == "a":
-            self.attack(target)
-
 
 # Warrior Classes
 class Fighter(Player):
-    None
+    var = None
 
 
 class Hoplite(Fighter):
@@ -43,6 +32,7 @@ class Hoplite(Fighter):
         self.strength = orig_strength
         target.defense = target_orig_defense
 
+
 class Soldier(Fighter):
     """Base sword-wielding class"""
     def __init__(self, name):
@@ -59,7 +49,7 @@ class FistFighter(Fighter):
 
 # Rogue classes (base)
 class Thief(Player):
-    None
+    var = None
 
 
 class Scout(Thief):
@@ -80,6 +70,7 @@ class Archer(Thief):
         # TODO make Archer unaffected by range in rows
 
     backRow = True
+
 
 class Rogue(Thief):
     """Base fist-fighting class"""
@@ -102,7 +93,7 @@ class Caster(Player):
         if target.is_alive and self.is_alive and self.magic_points > 1:
             # Check if target and attacker are both alive, else attack is cancelled.
 
-            magic_points = self.reduce_magic_points(1)
+            self.reduce_magic_points(1)
             # Reduce by 1
 
             miss = self.check_miss(target)
