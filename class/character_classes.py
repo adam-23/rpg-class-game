@@ -4,6 +4,18 @@ from main_mob_class import *
 class Player(Mob):
     """Base human class"""
 
+    def turn_choice(self, target):
+        print("A = Attack")
+        print("S = Spell")
+        print("D = Defend")
+        print("F = Flee")
+        print()
+        move_input = input("move: ").lower()
+        print(move_input)
+        if move_input == "a":
+            self.attack(target)
+
+
 # Warrior Classes
 class Fighter(Player):
     None
