@@ -70,6 +70,7 @@ class Archer(Thief):
         # TODO make Archer unaffected by range in rows
 
     backRow = True
+    is_melee_target = False
 
 
 class Rogue(Thief):

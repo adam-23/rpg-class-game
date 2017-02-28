@@ -47,13 +47,51 @@ class Mob:
     # Determines if they can act or be acted on
 
     is_melee_target = True
-    rangedAttacker = False
+
+    is_melee_attacker = True
+
     backRow = False
     # Can't be attacked with melee commands until front rows are killed
     # TODO remove one of these.
     # Melee or ranged damage
-
     is_defending = False
+
+    def target_pick(self, target_list):
+        # Print melee targets, only allow melee targets
+        if self.is_melee_attacker:
+            melee_targets = []
+            for target in target_list:
+                if target.is_melee_target:
+                    melee_targets.append(target)
+            target_list = melee_targets
+
+        target_index = []
+        final_pick = ""
+        for target in target_list:
+            target_index.append((target_list.index(target)) + 1)
+            # Append the target index in order
+            print(target.name, "=", target_index[target_list.index(target)])
+
+            # Iterates through the list of target_lists and their indices.
+
+        while_gate = False
+        while not while_gate:
+            try:
+                chosen_target = int(input("Target : "))
+            except ValueError:
+                print("Not a valid target.")
+                continue
+            if chosen_target in target_index:
+                final_pick = target_list[chosen_target - 1]
+                # print("Target picked :", final_pick.name)
+                break
+            else:
+                print("Not a valid target.")
+                continue
+        # Continuously ask the user for an input that matches an item in the index list
+
+        print()
+        return final_pick
 
     def check_life(self):
         # Check if alive
@@ -111,7 +149,6 @@ class Mob:
 
     def defend(self):
         self.is_defending = True
-        print()
         return self.is_defending
 
     def attack(self, target):
@@ -127,8 +164,11 @@ class Mob:
         """
         total_damage_given = 0
         # Place holder variable for damage
+        """if not target.is_melee_target:
+            print(target.name, "is not a melee target.")
+            return"""
 
-        if target.is_melee_target and self.is_alive:
+        if self.is_alive:
             # Check if target and attacker are both alive, else attack is cancelled.
 
             miss = self.check_miss(target)
@@ -147,20 +187,18 @@ class Mob:
                 # Calculate damage per hit, randomize damage, add to total
 
             print(self.name, "attacked", target.name + "!")
-            print(self.name + " dealt " + str(hits_number) + " hits!")
-            # Print summary
-
             if target.is_defending:
                 print(target.name, "is defending!")
                 total_damage_given = int(round(total_damage_given * 0.6))
                 # If target is defending, reduce total damage by 40% and then round up.
+            print(self.name + " dealt " + str(hits_number) + " hits!")
+            # Print summary of hits
 
             self.reduce_vitality(target, total_damage_given)
             # Reduce target vitality, print damage, print target vitality.
 
             target.check_life()
             # Check if target is dead. If so, mark them as such.
-
             print()
         else:
             print("One is dead, attack cancelled.")
@@ -175,6 +213,7 @@ class Mob:
         self.strength *= (2 / 3)
 
     # TODO: battle commands for every character
+
     def battle_command_list(self, target):
         active_battle = True
         print("Attack = A")
@@ -184,16 +223,17 @@ class Mob:
         # print("Tap = T")
         print("S for special command")
         while active_battle:
+            print()
             self.is_defending = False
             # If they try to act, they can no longer be actively defending.
-
             try:
                 user_choice = input("Pick a command:  ").lower()
-            except TypeError:
+                print()
+            except TypeError or ValueError:
                 continue
             if user_choice == 'a':
-                # TODO write a target-picking system
-                self.attack(target)
+                attack_target = self.target_pick(target)
+                self.attack(attack_target)
             elif user_choice == 'd':
                 self.defend()
             elif user_choice == 's':
