@@ -24,6 +24,17 @@ for combatant in combatants:
 current_player_party = []
 current_enemy_party = []
 
+'''
+Pseudocode for the random encounter battle script:
+    1. you have heros
+       you have enemies
+    2. every hero gets their menu pick for the command
+       every enemy randomly picks one of their actions
+    3. order every mob based on current speed
+    4. carry out every turn in order
+
+'''
+
 
 def battle_menu(player_party, enemy_party):
     for character in player_party:
