@@ -16,8 +16,7 @@ class Rat(Monster):
 
 
 class Impus(Monster):
-    """Hostile fey. Some view them as cute."""
-
+    """Hostile fey. Some people view them as cute."""
 
 class Imp(Impus):
     """Basic imp archetype. Annoying but not threatening."""
