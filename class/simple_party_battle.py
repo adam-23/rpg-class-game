@@ -32,6 +32,7 @@ Pseudocode for the random encounter battle script:
        every enemy randomly picks one of their actions
     3. order every mob based on current speed
     4. carry out every turn in order
+    5. Test for github bc I can't make it all work
 
 '''
 
