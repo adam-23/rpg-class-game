@@ -26,6 +26,7 @@ class Imp(Impus):
                          intelligence=3, spirit=3, magic_points=2)
 
 
+# fuckingtestforgithub
 class Pugilimp(Impus):
     """Imp with a massive fist. Powerful and agressive, but fragile."""
 
