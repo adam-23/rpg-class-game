@@ -1,6 +1,9 @@
 import random
 
 
+
+
+
 def randomize_damage(damage):
     random_damage_multiplier = float(random.randint(80, 120) / 100)
     # print("random damage multiplier =", random_damage_multiplier)
