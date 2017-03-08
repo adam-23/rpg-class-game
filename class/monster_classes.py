@@ -1,11 +1,24 @@
 from main_mob_class import *
 
+# beasts
+# ghosts
+# elements
+# eidolons
+# fey
+
+
+
 
 class Monster(Mob):
     """Base monster class"""
 
     def __init__(self, name, vitality, strength, agility, defense, intelligence, spirit, magic_points):
         super().__init__(name, vitality, strength, agility, defense, intelligence, spirit, magic_points)
+
+
+
+
+
 
 
 class Rat(Monster):
@@ -17,6 +30,8 @@ class Rat(Monster):
 
 class Impus(Monster):
     """Hostile fey. Some people view them as cute."""
+    # Basic class name for modifying all in the Imp family
+
 
 class Imp(Impus):
     """Basic imp archetype. Annoying but not threatening."""
@@ -26,7 +41,6 @@ class Imp(Impus):
                          intelligence=3, spirit=3, magic_points=2)
 
 
-# fuckingtestforgithub
 class Pugilimp(Impus):
     """Imp with a massive fist. Powerful and agressive, but fragile."""
 
@@ -35,7 +49,11 @@ class Pugilimp(Impus):
                          intelligence=1, spirit=1, magic_points=1)
 
 
-class Geismite(Monster):
+class Geis(Monster):
+    """Ethereal beings from another realm."""
+
+
+class Geismite(Geis):
     """Surreal ghost-like creatures that attack humans on sight."""
 
     def __init__(self):
