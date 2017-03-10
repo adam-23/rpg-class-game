@@ -1,8 +1,1 @@
-literally just a test file to see if I could pull my files from github correctly. Delete dis
-test 2
-test 3 (commit/push to master)
-test 4 (pull)
-test 5, pulled from github to uruk and then pushing this note up to github
-test 6, made this on github and am pulling this down to main
-lloks like in short, fetch is bugged but pull works just fine. weird. fix later
-test 7, pulling using git and not github from pycharm vcs
+git test 8, trying to fetch this from basic command-line git.
